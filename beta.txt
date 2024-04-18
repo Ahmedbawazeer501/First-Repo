@@ -1,1 +1,88 @@
 Hi this is a second txt of a code
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Retention 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140221
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body style="background-image:url('cloud-computing23 index.webp');background-repeat: no-repeat;background-size:cover;">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert Title</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- The video -->
+<!-- MENU LINKS -->
+<P><h1><center>Policy-based Broadcast Access Authorization for
+Flexible Data Sharing in Clouds</center></h1></P>
+<br>
+            <center>     
+<div class="collapse navbar-collapse">
+<nav>
+<br><br><br>
+
+
+                     <a href="adminlogin.jsp" class="smoothScroll">CLOUD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+                         <a href="LoginCSP.jsp" class="smoothScroll">CENTRAL AUTHORITY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <a href="DataownerRegister.jsp" class="smoothScroll">DATA OWNER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <a href="Register.jsp" class="smoothScroll">DATA USER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          </nav></br></br></br>
+               </div>
+  
+</body>
+
+</style>
+</head>
+
+		
+		
+		public static boolean updateUser(String s) throws SQLException {
+		String sql = "update req set request='true' where email='" + s + "'";
+		Connection con = DbConnection.connect();
+		Statement st = con.createStatement();
+		boolean f = st.execute(sql);
+		System.out.println("boolean is" + f);
+		return f;
+	}
+
+	public static boolean deleteUser(String s) throws SQLException {
+		String sql = "delete from req where email='" + s + "'";
+		Connection con = DbConnection.connect();
+		Statement st = con.createStatement();
+		boolean f = st.execute(sql);
+		System.out.println("boolean is" + f);
+		return f;
+	}
+
+	public static int update(String sql) {
+		// TODO Auto-generated method stub
+		int i = 0;
+		Connection con = connect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			i = ps.executeUpdate();
+			ps.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+</body>
+</html>
