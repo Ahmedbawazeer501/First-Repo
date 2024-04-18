@@ -1,0 +1,29 @@
+window.onload = function () {
+
+var options = {
+	animationEnabled: true,
+	title: {
+		text: "Student Circular activity"
+	},
+	axisY: {
+		title: "Growth Rate (in %)",
+		suffix: "%"
+	},
+	axisX: {
+		title: "Sports"
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0.0#"%"",
+		dataPoints: [
+			{ label: "Cricket", y: 0.9 },	
+			{ label: "Football", y: 1 },	
+			{ label: "Volleyball", y: 2 },
+			{ label: "Hockey", y: 3},	
+			
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+}
